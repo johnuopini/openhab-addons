@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon:addon id="switchbothub" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:addon="https://openhab.org/schemas/addon/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/addon/v1.0.0 https://openhab.org/schemas/addon-1.0.0.xsd">
+
+	<type>binding</type>
+	<name>SwitchBotHub Binding</name>
+	<description>Binding to control a Switch Bot Hub. This binding enables openHAB to control InfraRed virtual
+		devices, hub
+		state and hub sensors if available (es HUB2)</description>
+	<connection>cloud</connection>
+</addon:addon>

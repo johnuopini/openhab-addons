@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="switchbothub"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+	<!-- Switch Bot API Account -->
+	<bridge-type id="account">
+		<label>SwitchBot API Account</label>
+		<description>Provides communication witch the SwitchBot API</description>
+		<config-description>
+			<parameter name="openToken" type="text" required="true">
+				<label>Open Token</label>
+				<description>Token as retrieved in the app:
+					a) Go to Profile > Preference
+					b) Tap App Version 10 times. Developer
+					Options will show up
+					c) Tap Developer Options
+					d) Tap Get Token</description>
+				<context>text</context>
+			</parameter>
+			<parameter name="secretKey" type="text" required="true">
+				<label>Secret Key</label>
+				<description>In Developer Options tap Secret Key</description>
+			</parameter>
+		</config-description>
+	</bridge-type>
+	<!-- Switch Bot Hub -->
+	<thing-type id="hub">
+		<label>SwitchBot Hub</label>
+		<description>Provides communication witch a SwitchBot Hub</description>
+		<channels>
+			<channel id="state" typeId="state"/>
+		</channels>
+		<representation-property>serialNumber</representation-property>
+		<config-description>
+			<parameter name="deviceId" type="text" required="true">
+				<label>Device ID</label>
+				<description>The device id of the device from the SwitchBot API</description>
+			</parameter>
+		</config-description>
+	</thing-type>
+
+	<!-- Sample Channel Type -->
+	<channel-type id="sample-channel">
+		<item-type>Number:Temperature</item-type>
+		<label>Example Temperature</label><!-- Use uppercase words, except prepositions. 2-3 words, max 25 chars -->
+		<description>Sample channel for SwitchBotHub Binding</description>
+	</channel-type>
+</thing:thing-descriptions>
